@@ -1,0 +1,24 @@
+import pandas as pd
+import json
+
+##df=pd.read_csv("log_sample.log","\n")
+##df.to_csv('test.csv')
+##print(df)
+
+
+
+##create dataframe
+dataframe = pd.DataFrame([])
+
+
+##open file
+path = 'log_sample.log'
+with open(path,'r',encoding='utf-8') as log_data:  #r=read-only mode
+    line = log_data.readline()
+    while line:
+       line = log_data.readline()
+       columns = (pd.DataFrame(list(line)))
+       print(columns)
+##  log_data.close()
+
+columns.to_csv("test.csv")
