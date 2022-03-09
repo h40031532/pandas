@@ -8,7 +8,7 @@ import json
 
 
 ##create dataframe
-dataframe = pd.DataFrame([])
+dataframe = pd.DataFrame()
 
 
 ##open file
