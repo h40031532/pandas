@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    mongodb:
+       image: mongo
+       container_name: mongodb
+       environment:
+       - MONGO_INITDB_ROOT_USERNAME: admin
+       - MONGO_INITDB_ROOT_PASSWORD: publish
+       volumes:
+          - /home/hu/temi/mongodb/database:/data/db
+       ports:
+          - 27017:27017
+       networks: mongo
+networks:
+   mongo:
+     driver: bridge
